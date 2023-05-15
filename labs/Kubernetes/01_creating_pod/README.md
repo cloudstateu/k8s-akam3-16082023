@@ -31,7 +31,7 @@ You should get at least one node.
 
 1. Still in the terminal type
    ```bash
-   kubectl run my-nginx --restart=Never --image=nginx:1.7.9
+   kubectl run my-nginx --restart=Never --image=nginx:latest
    ``` 
    and press **Enter**.
 1. Check if there is any pod created by typing: `kubectl get pods`.
@@ -46,7 +46,7 @@ You should get at least one node.
 1. You can examine the definition by typing `cat my_pod_definition.yaml`.
 1. Edit existing pod by typing `kubectl edit pod my-nginx`.
    Pod definition should open in an editor. Edit the file by replacing line:
-   `- image: nginx:1.7.9` with `- image: nginx:1.9.1` and saving the file.
+   `- image: nginx:latest` with `- image: nginx:1.9.1` and saving the file.
 1. Check if pod is updated by typing `kubectl describe pod my-nginx`. The pod should use new docker image now.
 1. Make a proxy connection to your pod by typing:
    ```bash
